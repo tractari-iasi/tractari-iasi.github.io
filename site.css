@@ -1,0 +1,51 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#111010;--ink2:#1c1b1b;--ink3:#2a2929;--rule:#313030;--amber:#e8a000;--amber2:#f5b800;--cream:#f7f3ec;--cream2:#ede9e1;--stone:#ccc6bb;--muted:#655f5a;--muted2:#4e4a44;--D:'Barlow Condensed',sans-serif;--S:'Lora',Georgia,serif}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--S);font-size:17px;line-height:1.7;overflow-x:hidden}
+.topbar{background:var(--ink);color:var(--amber2);font-family:var(--D);font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-align:center;padding:8px 20px}
+.topbar a{color:var(--amber2);text-decoration:none}
+header{background:var(--cream);border-bottom:1px solid var(--stone);position:sticky;top:0;z-index:200}
+.header-top{background:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;border-bottom:3px solid var(--amber)}
+.logo{font-family:var(--D);font-size:1.45rem;font-weight:900;letter-spacing:.5px;text-transform:uppercase;color:#fff;text-decoration:none;display:flex;align-items:baseline;gap:10px}
+.logo em{font-style:normal;color:var(--amber2)}
+.logo-sub{font-family:var(--D);font-size:.65rem;font-weight:600;letter-spacing:2.5px;color:rgba(255,255,255,.55);text-transform:uppercase}
+.header-phone{display:flex;align-items:center;gap:20px}
+.live-badge{display:flex;align-items:center;gap:7px;font-family:var(--D);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4ade80}
+.live-dot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:blink 1.8s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.phone-link{font-family:var(--D);font-size:1.4rem;font-weight:900;letter-spacing:2px;color:var(--amber2);text-decoration:none}
+nav{background:var(--cream);border-bottom:1px solid var(--stone)}
+.nav-inner{max-width:1300px;margin:0 auto;padding:0 48px;display:flex;align-items:center;width:100%}
+.nav-link{font-family:var(--D);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);text-decoration:none;padding:13px 18px;border-right:1px solid var(--stone);transition:color .2s,background .2s;white-space:nowrap}
+.nav-link:first-child{border-left:1px solid var(--stone)}
+.nav-link.cur{color:var(--ink);background:var(--cream2)}
+.nav-link:hover{color:var(--ink);background:var(--cream2)}
+.nav-spacer{flex:1}
+.nav-cta{font-family:var(--D);font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:var(--amber);color:var(--ink);padding:13px 28px;text-decoration:none;transition:background .2s;border-left:1px solid var(--stone);white-space:nowrap}
+.nav-cta:hover{background:var(--amber2)}
+.mob-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.mob-toggle span{display:block;width:22px;height:2px;background:#fff;transition:all .3s}
+.mob-toggle.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.mob-toggle.open span:nth-child(2){opacity:0}
+.mob-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+footer{background:var(--ink);color:#fff;border-top:3px solid var(--amber)}
+.footer-grid{max-width:1300px;margin:0 auto;padding:52px 48px 24px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:52px}
+.footer-brand{font-family:var(--D);font-size:1.1rem;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.footer-brand span{color:var(--amber2)}
+.footer-desc{font-size:.85rem;font-style:italic;color:rgba(255,255,255,.65);line-height:1.8;max-width:280px;margin-bottom:14px}
+footer h4{font-family:var(--D);font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+footer a{display:block;font-family:var(--S);font-size:.86rem;font-style:italic;color:rgba(255,255,255,.7);text-decoration:none;margin-bottom:8px;transition:color .2s}
+footer a:hover{color:var(--amber2)}
+.footer-bottom{max-width:1300px;margin:0 auto;padding:16px 48px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-family:var(--D);font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);flex-wrap:wrap;gap:8px}
+.fab{position:fixed;bottom:24px;right:24px;background:var(--amber);color:var(--ink);font-family:var(--D);font-weight:800;font-size:.88rem;letter-spacing:1.5px;text-transform:uppercase;padding:12px 22px;text-decoration:none;z-index:300;box-shadow:0 6px 28px rgba(232,160,0,.4);display:flex;align-items:center;gap:8px;transition:background .2s,transform .15s}
+.fab:hover{background:var(--amber2);transform:translateY(-2px)}
+.stb{position:fixed;bottom:72px;right:24px;width:40px;height:40px;background:var(--ink);border:2px solid var(--amber);color:var(--amber2);font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:300;opacity:0;pointer-events:none;transition:opacity .3s,background .2s;line-height:1}
+.stb.vis{opacity:1;pointer-events:all}
+.stb:hover{background:var(--amber);color:var(--ink)}
+.hero-rule{height:3px;background:var(--amber);width:100%}
+.breadcrumb{background:var(--ink2);padding:10px 48px;font-family:var(--D);font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:var(--amber2)}
+.breadcrumb span{margin:0 8px;color:rgba(255,255,255,.45)}
+@media(max-width:768px){.header-top{padding:0 20px}.mob-toggle{display:flex}.header-phone .live-badge{display:none}nav .nav-inner{flex-direction:column;align-items:flex-start;padding:0;display:none}nav.open .nav-inner{display:flex}.nav-link{border-right:none;border-bottom:1px solid var(--stone);width:100%;padding:14px 20px}.nav-link:first-child{border-left:none}.nav-spacer{display:none}.nav-cta{border-left:none;width:100%;text-align:center;border-top:1px solid var(--stone)}.footer-grid{grid-template-columns:1fr;padding:40px 20px}.footer-bottom{padding:14px 20px}.breadcrumb{padding:10px 20px}.topbar{display:none}}
+@media(max-width:480px){.logo{font-size:1.05rem;gap:6px}.logo-sub{display:none}.header-top{height:52px}.phone-link{font-size:1.1rem;letter-spacing:1px}}
