@@ -1,5 +1,9 @@
 (function(){
 'use strict';
+// GTM head snippet
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBPPLJ68');
+// GTM noscript body
+var gtmNs=document.createElement('noscript');gtmNs.innerHTML='<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBPPLJ68" height="0" width="0" style="display:none;visibility:hidden"></iframe>';document.body.insertBefore(gtmNs,document.body.firstChild);
 var path=window.location.pathname;
 var isBlog=path.indexOf('/blog')===0;
 var isHome=path==='/'||path==='/index.html';
